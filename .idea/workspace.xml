@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="87712711-1f30-4e0f-ad10-53a274be8db8" name="Default Changelist" comment="" />
+    <list default="true" id="87712711-1f30-4e0f-ad10-53a274be8db8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MarvelMovies/catalog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/MarvelMovies/catalog/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MarvelMovies/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/MarvelMovies/db.sqlite3" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,6 +22,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1edHLP16oXoufC1SA43weJ3zECz" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -25,7 +30,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Python" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -45,5 +50,9 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="805" y="311" key="FileChooserDialogImpl/0.0.2048.1112/2560.-4.1920.1040@0.0.2048.1112" timestamp="1594645242028" />
+    <state x="533" y="199" key="SettingsEditor" timestamp="1594658888479">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="533" y="199" key="SettingsEditor/0.0.2048.1112/2560.-4.1920.1040@0.0.2048.1112" timestamp="1594658888479" />
   </component>
 </project>
