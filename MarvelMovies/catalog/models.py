@@ -31,6 +31,12 @@ class Movie(models.Model):
     genre = models.ManyToManyField(Genre, help_text='Select a genre for this movie')
     date = models.DateField(null=True, blank=True)  # it's not used in tutorial
 
+    def display_genre(self):
+        """Create a string for the Genre. This is required to display genre in Admin."""
+        return ', '.join(genre.name for genre in self.genre.all()[:3])
+
+    display_genre.short_description = 'Genre'
+
     def __str__(self):
         return self.title
 
@@ -44,7 +50,6 @@ class MovieInstance(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4,
                           help_text='Unique ID for this particular movie across whole library')
     movie = models.ForeignKey('Movie', on_delete=models.SET_NULL, null=True)
-    imprint = models.CharField(max_length=200)
     due_back = models.DateField(null=True, blank=True)
 
     LOAN_STATUS = (
@@ -81,3 +86,4 @@ class Director(models.Model):
 
     def __str__(self):
         return f'{self.last_name}, {self.first_name}'
+

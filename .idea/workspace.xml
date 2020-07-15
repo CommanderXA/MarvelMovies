@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="87712711-1f30-4e0f-ad10-53a274be8db8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MarvelMovies/MarvelMovies/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/MarvelMovies/MarvelMovies/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MarvelMovies/catalog/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/MarvelMovies/catalog/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MarvelMovies/catalog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/MarvelMovies/catalog/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MarvelMovies/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/MarvelMovies/db.sqlite3" afterDir="false" />
     </list>
