@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="87712711-1f30-4e0f-ad10-53a274be8db8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/MarvelMovies/catalog/static/css/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MarvelMovies/catalog/templates/base_generic.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MarvelMovies/catalog/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MarvelMovies/MarvelMovies/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/MarvelMovies/MarvelMovies/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MarvelMovies/catalog/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/MarvelMovies/catalog/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MarvelMovies/catalog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/MarvelMovies/catalog/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MarvelMovies/catalog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/MarvelMovies/catalog/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MarvelMovies/catalog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/MarvelMovies/catalog/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MarvelMovies/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/MarvelMovies/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,6 +21,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -31,8 +36,17 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Python" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Projects\marvel_movies\MarvelMovies\catalog" />
+      <recent name="C:\Projects\marvel_movies\MarvelMovies\catalog\templates\static" />
+      <recent name="C:\Projects\marvel_movies\MarvelMovies\catalog\templates" />
+      <recent name="C:\Projects\marvel_movies\MarvelMovies\catalog\templates\static\css" />
+    </key>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -47,7 +61,14 @@
     </task>
     <servers />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.css" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="784" y="346" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1594885168052">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="784" y="346" key="#com.intellij.fileTypes.FileTypeChooser/0.0.2048.1112/2560.-4.1920.1040@0.0.2048.1112" timestamp="1594885168052" />
     <state x="805" y="311" key="FileChooserDialogImpl" timestamp="1594645242028">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
@@ -56,5 +77,9 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="533" y="199" key="SettingsEditor/0.0.2048.1112/2560.-4.1920.1040@0.0.2048.1112" timestamp="1594658888479" />
+    <state x="687" y="243" key="search.everywhere.popup" timestamp="1594885137260">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="687" y="243" key="search.everywhere.popup/0.0.2048.1112/2560.-4.1920.1040@0.0.2048.1112" timestamp="1594885137260" />
   </component>
 </project>

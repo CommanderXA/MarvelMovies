@@ -1,0 +1,18 @@
+{% extends "base_generic.html" %}
+
+{% block title %}<title>Home Page</title>{% endblock %}
+
+{% block content %}
+  <h1>MarvelMovies Home</h1>
+  <p>Welcome to Marvel Movies</p>
+  <h2>Dynamic content</h2>
+  <p>The library has the following record counts:</p>
+  <ul>
+    <li><strong>Movies:</strong> {{ num_movies }}</li>
+    <li><strong>Copies:</strong> {{ num_instances }}</li>
+    <li><strong>Copies available:</strong> {{ num_instances_available }}</li>
+    <li><strong>Directors:</strong> {{ num_directors }}</li>
+    <li><strong>Genres:</strong> {{ genres }}</li>
+    <li><strong>Action Movies:</strong> {{ action_movies }}</li>
+  </ul>
+{% endblock %}
