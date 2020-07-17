@@ -1,5 +1,7 @@
+from django.shortcuts import get_object_or_404
 from django.shortcuts import render
-from .models import Movie, Director, MovieInstance, Genre
+from .models import Movie, Director, MovieInstance, Genre, Language
+from django.views import generic
 
 # Create your views here.
 
@@ -26,3 +28,31 @@ def index(request):
         'action_movies': action_movies,
     }
     return render(request, 'index.html', context)
+
+
+class MovieListView(generic.ListView):
+    model = Movie
+    paginate_by = 10
+
+
+class MovieDetailView(generic.DetailView):
+    model = Movie
+
+
+def movie_detail_view(request, primary_key):
+    movie = get_object_or_404(Movie, pk=primary_key)
+    return render(request, 'catalog/movie_detail.html', context={'movie': movie})
+
+
+class DirectorsListView(generic.ListView):
+    model = Director
+    paginate_by = 10
+
+
+class DirectorDetailView(generic.DetailView):
+    model = Director
+
+
+def director_detail_view(request, primary_key):
+    director = get_object_or_404(Director, pk=primary_key)
+    return render(request, 'catalog/director_detail.html', context={'director': director})

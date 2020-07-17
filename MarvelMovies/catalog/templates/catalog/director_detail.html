@@ -1,0 +1,17 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>{{ director }}</h1>
+    <p>{{ director.date_of_birth }}</p>
+
+    <div style="margin-left:20px;margin-top:20px;width:80%;">
+        <h4>Movies</h4>
+        <dl>
+            {% for movie in director.movie_set.all %}
+            <dt><a href="{% url 'movie_detail' movie.pk %}">{{ movie }}</a> ({{ movie.movieinstance_set.all.count }}) </dt>
+            <dd>{{ movie.summary }}</dd>
+            {% endfor %}
+        </dl>
+    </div>
+
+{% endblock %}

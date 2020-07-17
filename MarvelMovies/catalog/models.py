@@ -30,6 +30,10 @@ class Movie(models.Model):
     imdb = models.FloatField('IMDB', help_text='IMDB rating')
     genre = models.ManyToManyField(Genre, help_text='Select a genre for this movie')
     date = models.DateField(null=True, blank=True)  # it's not used in tutorial
+    language = models.ManyToManyField(Language)
+
+    class Meta:
+        get_latest_by = 'date'
 
     def display_genre(self):
         """Create a string for the Genre. This is required to display genre in Admin."""
@@ -37,12 +41,17 @@ class Movie(models.Model):
 
     display_genre.short_description = 'Genre'
 
+    def display_language(self):
+        return ', '.join(language.movie_language for language in self.language.all())
+
+    display_language.short_description = 'Language'
+
     def __str__(self):
         return self.title
 
     def get_absolute_url(self):
         """Returns the url to access a detail record for this movie."""
-        return reverse('movie-detail', args=[str(self.id)])
+        return reverse('movie_detail', args=[str(self.id)])
 
 
 class MovieInstance(models.Model):
@@ -79,10 +88,10 @@ class Director(models.Model):
     date_of_birth = models.DateField(null=True, blank=True)
 
     class Meta:
-        ordering = ['last_name', 'first_name']
+        ordering = ['first_name']
 
     def get_absolute_url(self):
-        return reverse('director-detail', args=[str(self.id)])
+        return reverse('director_detail', args=[str(self.id)])
 
     def __str__(self):
-        return f'{self.last_name}, {self.first_name}'
+        return f' {self.first_name} {self.last_name}'

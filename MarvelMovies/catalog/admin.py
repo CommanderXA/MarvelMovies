@@ -24,7 +24,7 @@ class MoviesInstanceInline(admin.TabularInline):
 
 
 class MovieAdmin(admin.ModelAdmin):
-    list_display = ('title', 'director', 'display_genre')
+    list_display = ('title', 'director', 'display_genre', 'display_language')
     inlines = [MoviesInstanceInline]
 
 
