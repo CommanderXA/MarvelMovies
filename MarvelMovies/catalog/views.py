@@ -19,6 +19,9 @@ def index(request):
     genres = Genre.objects.count()
     action_movies = Movie.objects.filter(genre__name='Action').count()
 
+    num_visits = request.session.get('num_visits', 0)
+    request.session['num_visits'] = num_visits + 1
+
     context = {
         'num_movies': num_movies,
         'num_instances': num_instances,
@@ -26,6 +29,7 @@ def index(request):
         'num_directors': num_directors,
         'genres': genres,
         'action_movies': action_movies,
+        'num_visits': num_visits,
     }
     return render(request, 'index.html', context)
 
