@@ -1,0 +1,19 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>Borrowed Movies</h1>
+
+    {% if movieinstance_list %}
+    <ul>
+
+      {% for movieinst in movieinstance_list %}
+      <li class="{% if movieinst.is_overdue %}text-danger{% endif %}">
+        <a href="{% url 'movie_detail' movieinst.movie.pk %}">{{movieinst.movie.title}}</a> ({{ movieinst.due_back }}){% if user.is_staff %}- {{ movieinst.borrower }}{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+
+    {% else %}
+      <p>There are no movies borrowed.</p>
+    {% endif %}
+{% endblock %}

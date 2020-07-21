@@ -34,13 +34,13 @@ admin.site.register(Movie, MovieAdmin)
 @admin.register(MovieInstance)
 class MovieInstanceAdmin(admin.ModelAdmin):
     list_filter = ('status', 'due_back')
-    list_display = ('movie', 'status', 'due_back', 'id')
+    list_display = ('movie', 'status', 'borrower', 'due_back', 'id')
 
     fieldsets = (
         (None, {
             'fields': ('movie', 'id')
         }),
         ('Availability', {
-            'fields': ('status', 'due_back')
+            'fields': ('status', 'due_back', 'borrower')
         }),
     )

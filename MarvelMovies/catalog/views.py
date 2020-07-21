@@ -2,6 +2,8 @@ from django.shortcuts import get_object_or_404
 from django.shortcuts import render
 from .models import Movie, Director, MovieInstance, Genre, Language
 from django.views import generic
+from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
+
 
 # Create your views here.
 
@@ -60,3 +62,23 @@ class DirectorDetailView(generic.DetailView):
 def director_detail_view(request, primary_key):
     director = get_object_or_404(Director, pk=primary_key)
     return render(request, 'catalog/director_detail.html', context={'director': director})
+
+
+class LoanedMoviesByUserListView(LoginRequiredMixin, generic.ListView):
+    """Generic class-based view listing books on loan to current user."""
+    model = MovieInstance
+    template_name = 'catalog/movieinstance_list_borrowed_user.html'
+    paginate_by = 10
+
+    def get_queryset(self):
+        return MovieInstance.objects.filter(borrower=self.request.user).filter(status__exact='o').order_by('due_back')
+
+
+class LoanedMoviesAllUsersListView(PermissionRequiredMixin, generic.ListView):
+    model = MovieInstance
+    permission_required = 'catalog.can_mark_returned'
+    template_name = 'catalog/movieinstance_list_all_borrowed.html'
+    paginate_by = 10
+
+    def get_queryset(self):
+        return MovieInstance.objects.filter(status__exact='o').order_by('due_back')
